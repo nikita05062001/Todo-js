@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" href="styles.css" />
+	<title>ИС "Автоматизация РМ Сис. Админа"</title>
+</head>
+
+<body>
+	<nav class="header navbar navbar-dark bg-primary">
+		<a class="navbar-brand">ИС "Автоматизация рабочего места системного Администратора</a>
+		<form class="form-inline">
+			<select class="form-control form-control-sm" id="themeSelect">
+				<option value="default">Тема по умолчанию</option>
+				<option value="light">Светлая тема</option>
+				<option value="dark">Тёмная тема</option>
+			</select>
+		</form>
+	</nav>
+	<div class="form-section mt-5">
+		<div class="container">
+			<div class="row">
+				<div class="col col-8 mx-auto">
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Список задач</h5>
+							<button class="btn ml-auto btn-primary btn-alltask">
+								Показать все задачи
+							</button>
+							<button class="btn ml-auto btn-primary btn-donttask">
+								Показать незавершенные задачи
+							</button>
+							<ul class="task-list"></ul>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-body">
+							<h5 class="card-title">Добавьте новую задачу</h5>
+							<form name="addTask">
+								<input type="text" name="title" id="title" required class="form-control"
+									placeholder="Введите заголовок" />
+								<input type="text" name="body" id="body" required class="form-control mt-3"
+									placeholder="Введите текст задачи" />
+								<button type="submit" class="btn btn-primary mt-4">
+									Добавить задачу
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tasks-list-section mt-5">
+		<div class="container">
+			<ul class="list-group"></ul>
+		</div>
+	</div>
+	<script src="app.js"></script>
+</body>
+
+</html>
